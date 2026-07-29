@@ -19,6 +19,15 @@ Full specification lives in this skill's companion documents — read the one re
 - `TEST_SUITE.md` — how this skill itself was validated, and how to re-validate it
 - `EVOLUTION_PLAN.md` — what's deliberately out of scope for v1, and the trigger to revisit
 
+## Standing defaults — apply automatically, every invocation, without being re-stated
+
+The user has corrected this multiple times (2026-07-29/30) after invocations that under-delegated or went shallow. These are not optional extras to remember only when explicitly asked for — they are the default mode every time this skill is invoked:
+
+1. **Go deep by default.** Deep research (real web search, current sources), deep system/code scans, and high-rigor testing (real commands run and their real output inspected, not just claimed) — not a shallow single-pass answer.
+2. **Use all available delegate AIs, not just one or two.** Hermes, Codex, OpenCode, and Antigravity are all in scope for a given task; match each piece of work to whichever tool fits (see `REQUIREMENTS.md` R2), but don't default to reaching for only the first one that comes to mind.
+3. **Monitor every background/delegated task for real liveness every ~5 minutes** while it's running — don't just wait passively for a completion notification. A hung process never exits and never notifies; only a proactive check catches it. (Verify liveness via a method that shows full command lines — a bare `ps aux`/`ps` grep can miss a live process if it truncates long command lines, a real incident that caused an accidental duplicate delegation on 2026-07-29.)
+4. **Coordinator stays a coordinator.** None of the above means doing the diagnostic/build work yourself instead of delegating it — see `REQUIREMENTS.md` R1/R2. Going "deep" means the delegated work is deep, not that the coordinator absorbs it.
+
 ## Quick start
 
 1. Read `WORKFLOW.md` for the step sequence.
