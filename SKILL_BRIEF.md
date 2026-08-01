@@ -4,6 +4,8 @@
 
 A standing operating posture for any task the user tags "use multi AI framework" (or equivalent — "deep work", "heavy work", "use all AIs"). It is not a single tool call; it's a way of running a whole task across multiple independently-billed AI CLIs already installed on this machine (Claude Code, Hermes Agent, OpenAI Codex CLI, OpenCode, Google Antigravity), coordinated by Claude Code.
 
+**Standing instruction, verbatim, every invocation of this skill (added 2026-08-01 per explicit user request):** *"do deep research on this, deep analysis, deep testing, deep system scanning, heavy market research, heavy comparing, heavy thinking."* This is not a suggestion to apply when it seems warranted — it is the default depth for every `/multi-ai-framework` invocation, full stop, matching the "Go deep by default" standing default already documented at the top of `SKILL.md`. If the task is genuinely too small to warrant this (a one-line factual lookup), say so explicitly rather than silently doing a shallow pass under the framework's name.
+
 ## Why it exists
 
 Two problems it solves, discovered the hard way across real sessions:
