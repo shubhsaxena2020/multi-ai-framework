@@ -4,14 +4,14 @@ The concrete step sequence for a task tagged "use multi AI framework". Not every
 
 ## 1. Scope and split
 
-Before delegating anything, work out: what part of this needs a live look at the actual system (stays local), what part needs deep research or a from-scratch build (delegates), what part needs an adversarial second opinion on something already produced (delegates to a *different* tool than whatever produced it).
+Before delegating anything, work out: what tiny part needs a live local look so a delegate can be briefed or verified (stays local), what substantive work needs deep research, diagnosis, drafting, or a from-scratch build plan (delegates), what part needs an adversarial second opinion on something already produced (delegates to a *different* tool than whatever produced it).
 
 ## 2. Baseline evidence: a quick local look, then delegate the actual investigation
 
-The coordinator is the boss, not the primary investigator — per real evaluated evidence (see `EVOLUTION_PLAN.md`'s note on the 2026-07-29 research pass), letting the lead do all the diagnostic legwork itself is exactly the "heavy lifting" pattern this framework exists to avoid. The right split:
+The coordinator is the boss, not the primary investigator or primary worker — per real evaluated evidence (see `EVOLUTION_PLAN.md`'s note on the 2026-07-29 research pass), letting the lead do all the diagnostic legwork itself is exactly the "heavy lifting" pattern this framework exists to avoid. The 2026-08-04 standing correction makes this stricter: Claude Code should minimize its own direct substantive work because its usage budget burns too fast. The right split:
 
-- **Do a fast, minimal local check first** — just enough to give a delegate real evidence instead of a vague symptom ("app X isn't in Windows Search" → confirm the binary still exists on disk, that's a 5-second check). Do NOT do the full root-cause investigation yourself.
-- **Delegate the actual diagnosis** — "why would this happen, what's the likely cause, what commands would confirm and fix it" — to a worker CLI, with the quick local check's findings included as evidence.
+- **Do a fast, minimal local check first** — just enough to give a delegate real evidence instead of a vague symptom ("app X isn't in Windows Search" → confirm the binary still exists on disk, that's a 5-second check). Do NOT do the full root-cause investigation, broad file reading, or first-pass drafting yourself.
+- **Delegate the actual work** — "why would this happen, what's the likely cause, what commands would confirm and fix it, what should the draft/plan/code look like" — to a worker CLI, with the quick local check's findings included as evidence.
 - **The coordinator then verifies and executes** the delegate's proposed fix directly (see step 8) — diagnosis delegates, mutation and verification stay centralized. This isn't a contradiction: a delegate can tell you *what* is probably wrong and *what command* would fix it; only the coordinator has the actual system access to safely run that command and confirm it worked.
 
 Exception: if the check is trivially fast (one command, unambiguous result — e.g. "does this file exist") and delegating would cost more round-trip time than it saves, just do it. Use judgment, but default to delegating the *investigation*, not just the research.
