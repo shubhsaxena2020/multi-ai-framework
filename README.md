@@ -75,7 +75,7 @@ Phrases such as **"deep work," "heavy work,"** and **"use all AIs"** also match 
 
 - **Deep work is the default.** Delegated tasks should perform real research, broad code/system inspection, bug hunting, and meaningful testing where the task calls for them — not return a shallow first pass.
 - **All available delegate AIs are in scope.** Work is matched to the tools that fit it. This does not mean racing all four CLIs against the same question without a reconciliation plan.
-- **Long-running work is actively monitored.** Background processes receive a real liveness check roughly every five minutes, using process inspection that shows full command lines so a truncated process listing does not create a false negative.
+- **Long-running work is actively monitored.** Background processes receive a real liveness check roughly every two minutes, using process inspection that shows full command lines so a truncated process listing does not create a false negative.
 - **Prompts are self-contained and evidence-bearing.** Delegates start cold, so the coordinator includes the actual context, files, logs, constraints, numbered questions, and fact-checking expectation in each prompt.
 - **Every material claim faces a quality gate.** Numbers, schemas, review findings, operational costs, and "it works" statements are checked against the kind of evidence that can actually establish them.
 - **Only the coordinator mutates the real environment.** A delegate may return research, code, a diff, or commands; Claude Code reviews and applies any change, then independently tests it.
